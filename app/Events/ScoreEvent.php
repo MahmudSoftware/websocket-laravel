@@ -20,7 +20,7 @@ class ScoreEvent implements ShouldBroadcast
      */
     public function __construct($scoreValue)
     {
-        $scoreValue = $this->scoreValue;
+         $this->scoreValue = $scoreValue;
     }
 
     /**
@@ -34,7 +34,7 @@ class ScoreEvent implements ShouldBroadcast
         //     new PrivateChannel('channel-name'),
         // ];
 
-        return ['score-channel'];
+        return ['my-channel'];
     }
 
     public function broadcastAs()
@@ -43,6 +43,6 @@ class ScoreEvent implements ShouldBroadcast
         //     new PrivateChannel('channel-name'),
         // ];
 
-        return 'score-channel';
+        return 'my-event';
     }
 }

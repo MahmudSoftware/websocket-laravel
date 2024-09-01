@@ -20,7 +20,6 @@ class FrontController extends Controller
     public function updateScore(Request $request)
     {
 
-
         $scoreValue = $request->input('score');
 
         event(new ScoreEvent($scoreValue));

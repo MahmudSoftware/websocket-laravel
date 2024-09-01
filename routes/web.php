@@ -24,6 +24,7 @@ Route::get('/', [FrontController::class, 'index']);
 
 Route::get('/add/score', [FrontController::class, 'addScore'])->name('add.score');
 Route::post('/update/score', [FrontController::class, 'updateScore'])->name('update.score');
+
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
